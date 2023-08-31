@@ -43,12 +43,15 @@
   
   /* Ліва половина контейнера */
   .cat-info {
+    display: flex;
     
   }
   
   /* Зображення кота */
-  .cat-info-img img {
-    
+  .cat-info-img .img {
+    width: 400px;
+    height: 300px;
+
   }
   
   /* Права половина контейнера */
