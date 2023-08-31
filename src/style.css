@@ -39,40 +39,27 @@
   
   .container {
     margin-bottom: 20px;
-  }
+  }    
   
-  /* Ліва половина контейнера (вибір породи) */
-  .breed-select {
+  .cat-info {
+    display: flex;    
     
   }
   
-  /* Права половина контейнера */
-  .cat-info {
-    display: flex;    
-    gap: 20px; /* Додайте відстань між вікном вибору та інформацією про кота */
-  }
-  
-  /* Зображення кота */
-  .cat-info-img img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-    max-width: 100%;
-    max-height: 100%;
-  }
-  
-  /* Опис та темперамент кота */
-  .cat-info-text {
-    display: flex;
-    flex-direction: inherit;
-
-  }
-
   .cat-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    padding: 20px;
+    padding: 10px;
+  }
+
+  .cat-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .cat-text p {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
