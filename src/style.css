@@ -43,28 +43,15 @@
   
   /* Ліва половина контейнера */
   .cat-info {
-    flex: 1; /* Займає половину ширини */
-    display: flex;
     
-    justify-content: center;
-    align-items: center;
   }
   
   /* Зображення кота */
   .cat-info-img img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+    
   }
   
   /* Права половина контейнера */
   .cat-info-text {
-    flex: 1; /* Займає половину ширини */
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Вирівнює текст зверху */
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
+    
   }
