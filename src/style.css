@@ -65,6 +65,6 @@
   /* Опис та темперамент кота */
   .cat-info-text {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: inherit;
+
   }
