@@ -36,27 +36,36 @@
     }
   }
   
-  .cat-info {
-      max-width: 100%;
-      height: auto;
-  }
-
-  .cat-container {
+  .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
   }
-
-  /* Стилі для зображення кота */
-  .cat-image {
-    max-width: 50%; /* Зображення займе половину екрана */
+  
+  .cat-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 1; /* Займе залишок доступного простору в контейнері */
+    padding: 20px;
+  }
+  
+  /* Стилі для картинки кота */
+  .cat-info-img {
+    flex: 1; /* Займе половину доступного простору */
+    text-align: center; /* Вирівнювання по центру */
+  }
+  
+  .cat-info-img img {
+    max-width: 100%; /* Зображення в межах контейнера */
     height: auto;
   }
-
-  .cat-description {
-    flex: 1; /* Займе залишок доступного простору в контейнері */
-    padding-left: 20px; /* Відступ зліва для розділу між зображенням та описом */
+  
+  /* Стилі для текстового опису */
+  .cat-info-text {
+    flex: 1; /* Займе половину доступного простору */
+    padding-left: 20px; /* Відступ зліва між зображенням та текстом */
   }
