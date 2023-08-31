@@ -2,8 +2,8 @@ import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 
 const breedSelect = document.querySelector(".breed-select");
 const loader = document.querySelector(".loader");
-const error = document.querySelector(".error");
-const catInfo = document.querySelector(".cat-info");
+const catImage = document.getElementById("cat-image");
+const catDescription = document.getElementById("cat-description");
 
 async function populateBreedSelect() {
   try {
@@ -25,15 +25,15 @@ async function populateBreedSelect() {
 async function displayCatInfo(breedId) {
   try {
     const cat = await fetchCatByBreed(breedId);
-    catInfo.innerHTML = `
-      <img src="${cat.url}" alt="${cat.breeds[0].name}" />
+    catImage.src = cat.url;
+    catImage.alt = cat.breeds[0].name;
+    catDescription.innerHTML = `
       <h2>${cat.breeds[0].name}</h2>
       <p>${cat.breeds[0].description}</p>
       <p>Temperament: ${cat.breeds[0].temperament}</p>
     `;
   } catch (err) {
     console.error("Error fetching cat information:", err);
-    error.textContent = "Oops! Something went wrong while fetching cat information.";
   } finally {
     loader.style.display = "none";
   }
@@ -47,7 +47,4 @@ breedSelect.addEventListener("change", () => {
   displayCatInfo(selectedBreedId);
 });
 
-
-// Приховати елемент .error при завантаженні сторінки
-error.style.display = "none";
 populateBreedSelect();

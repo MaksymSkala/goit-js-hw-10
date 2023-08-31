@@ -1,4 +1,39 @@
-.loader {
+
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .breed-select {
+    margin-right: 20px;
+  }
+  
+  .cat-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .cat-info-img img {
+    width: 500px;
+    height: auto;
+  }
+  
+  .cat-info-text {
+    margin-top: 20px;
+  }
+  
+  .loader {
     font-size: 10px;
     width: 1em;
     height: 1em;
@@ -36,34 +71,3 @@
     }
   }
   
-  .container {
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .cat-info {
-    display: flex;
-    align-items: center; /* Центрування по вертикалі */
-    flex: 1; /* Займе залишок доступного простору в контейнері */
-    padding: 20px;
-  }
-  
-  /* Стилі для зображення кота */
-  .cat-info-img {
-    flex: 1; /* Займе половину доступного простору */
-    text-align: center; /* Вирівнювання по центру */
-  }
-  
-  .cat-info-img img {
-    max-width: 500px; /* Розмір картинки 500px */
-    height: auto;
-  }
-  
-  /* Стилі для текстового опису */
-  .cat-info-text {
-    flex: 1; /* Займе половину доступного простору */
-    padding-left: 20px; /* Відступ зліва між зображенням та текстом */
-    display: flex;
-    flex-direction: column; /* Опис від верху до низу */
-    justify-content: flex-start; /* Вирівнювання тексту вгору */
-  }
