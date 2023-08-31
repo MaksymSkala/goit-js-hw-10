@@ -26,20 +26,12 @@ async function displayCatInfo(breedId) {
   try {
     const cat = await fetchCatByBreed(breedId);
     catInfo.innerHTML = `
-      <img src="${cat.url}" alt="${cat.breeds[0].name}" />
+      <img src="${cat.url}" alt="${cat.breeds[0].name}" width="200px" height="200px" />
       <h2>${cat.breeds[0].name}</h2>
       <p>${cat.breeds[0].description}</p>
       <p>Temperament: ${cat.breeds[0].temperament}</p>
     `;
-
-    const catImage = document.querySelector(".cat-image");
-    catImage.style.width = "200px";
-    catImage.style.height = "200px";
-    catImage.style.objectFit = "cover";
-    catImage.style.maxWidth = "100%";
-    catImage.style.marginRight = "20px";
-  
-
+    
   } catch (err) {
     console.error("Error fetching cat information:", err);
     error.textContent = "Oops! Something went wrong while fetching cat information.";
