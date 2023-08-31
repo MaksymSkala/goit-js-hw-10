@@ -56,12 +56,12 @@
   }
   
   .cat-info-img img {
-    max-width: 50%; /* Зображення в межах контейнера */
+    max-width: 500px; /* Зображення в межах контейнера */
     height: auto;
   }
   
   /* Стилі для текстового опису */
   .cat-info-text {
-    
+    display: block;
     padding-left: 20px; /* Відступ зліва між зображенням та текстом */
   }
