@@ -43,25 +43,24 @@
   
   .cat-info {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start; /* Вирівнювання вгору */
     flex: 1; /* Займе залишок доступного простору в контейнері */
     padding: 20px;
   }
   
-  /* Стилі для картинки кота */
+  /* Стилі для зображення кота */
   .cat-info-img {
     flex: 1; /* Займе половину доступного простору */
     text-align: center; /* Вирівнювання по центру */
   }
   
   .cat-info-img img {
-    max-width: 500px; /* Зображення в межах контейнера */
+    max-width: 500px; /* Розмір картинки 500px */
     height: auto;
   }
   
   /* Стилі для текстового опису */
   .cat-info-text {
-    display: block;
+    flex: 1; /* Займе половину доступного простору */
     padding-left: 20px; /* Відступ зліва між зображенням та текстом */
   }
