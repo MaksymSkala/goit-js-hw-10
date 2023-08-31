@@ -39,17 +39,25 @@
   
   .container {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
     height: 100vh;
+    box-sizing: border-box;
   }
   
-  /* Ліва половина контейнера */
+  /* Ліва половина контейнера (вибір породи) */
+  .breed-select {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 20px;
+  }
+  
+  /* Права половина контейнера */
   .cat-info {
-    flex: 1;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
+    align-items: flex-start;
+    flex: 1;
   }
   
   /* Зображення кота */
@@ -58,23 +66,13 @@
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
+    margin-right: 20px;
   }
   
-  /* Права половина контейнера */
+  /* Опис та темперамент кота */
   .cat-info-text {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Опис і темперамент відображаються в колонку */
-    justify-content: space-between; /* Розмістити текст між верхом і низом */
-    align-items: flex-start; /* Вирівняти текст зверху */
-    padding: 20px;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    max-width: 400px; /* Максимальна ширина тексту */
-  }
-  
-  /* Темперамент */
-  .cat-info-text p:last-child {
-    margin-bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
   }
