@@ -49,12 +49,12 @@
   
   /* Зображення кота */
   .cat-info-img .img {
-    width: 400px;
-    height: 300px;
+    max-width: 400px;
+    max-height: 300px;
 
   }
   
   /* Права половина контейнера */
   .cat-info-text {
-    
+    display: block;
   }
