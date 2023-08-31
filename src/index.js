@@ -1,9 +1,6 @@
 import { fetchBreeds, fetchCatByBreed } from "./cat-api";
 
-const breedSelect = new SlimSelect({
-  select: ".breed-select"
-});
-
+const breedSelect = document.querySelector(".breed-select");
 const loader = document.querySelector(".loader");
 const error = document.querySelector(".error");
 const catInfo = document.querySelector(".cat-info");
@@ -12,7 +9,10 @@ async function populateBreedSelect() {
   try {
     const breeds = await fetchBreeds();
     breeds.forEach(breed => {
-      breedSelect.add(breed.id, breed.name);
+      const option = document.createElement("option");
+      option.value = breed.id;
+      option.textContent = breed.name;
+      breedSelect.appendChild(option);
     });
   } catch (err) {
     console.error("Error fetching breeds:", err);
@@ -25,8 +25,8 @@ async function populateBreedSelect() {
 async function displayCatInfo(breedId) {
   try {
     const cat = await fetchCatByBreed(breedId);
-    catInfo.querySelector(".cat-info-img").innerHTML = `<img src="${cat.url}" alt="${cat.breeds[0].name}" />`;
-    catInfo.querySelector(".cat-info-text").innerHTML = `
+    catInfo.innerHTML = `
+      <img src="${cat.url}" alt="${cat.breeds[0].name}" />
       <h2>${cat.breeds[0].name}</h2>
       <p>${cat.breeds[0].description}</p>
       <p>Temperament: ${cat.breeds[0].temperament}</p>
@@ -39,14 +39,13 @@ async function displayCatInfo(breedId) {
   }
 }
 
-breedSelect.data.onChange = () => {
-  const selectedBreedId = breedSelect.selected();
+breedSelect.addEventListener("change", () => {
+  const selectedBreedId = breedSelect.value;
   loader.style.display = "block";
   error.textContent = "";
-  catInfo.querySelector(".cat-info-img").innerHTML = "";
-  catInfo.querySelector(".cat-info-text").innerHTML = "";
+  catInfo.innerHTML = "";
   displayCatInfo(selectedBreedId);
-};
+});
 
 error.style.display = "none";
 populateBreedSelect();
