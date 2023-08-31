@@ -27,9 +27,11 @@ async function displayCatInfo(breedId) {
     const cat = await fetchCatByBreed(breedId);
     catInfo.innerHTML = `
       <img src="${cat.url}" alt="${cat.breeds[0].name}" width="500px" height="500px" />
-      <h2>${cat.breeds[0].name}</h2>
-      <p>${cat.breeds[0].description}</p>
-      <p>Temperament: ${cat.breeds[0].temperament}</p>
+      <div class="cat-text">
+        <h2>${cat.breeds[0].name}</h2>
+        <p>${cat.breeds[0].description}</p>
+        <p>Temperament: ${cat.breeds[0].temperament}</p>
+      </div>
     `;
     
   } catch (err) {
