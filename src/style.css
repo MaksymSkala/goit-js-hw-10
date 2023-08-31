@@ -37,10 +37,6 @@
   }
   
   .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
   }
@@ -60,12 +56,12 @@
   }
   
   .cat-info-img img {
-    max-width: 100%; /* Зображення в межах контейнера */
+    max-width: 50%; /* Зображення в межах контейнера */
     height: auto;
   }
   
   /* Стилі для текстового опису */
   .cat-info-text {
-    flex: 1; /* Займе половину доступного простору */
+    
     padding-left: 20px; /* Відступ зліва між зображенням та текстом */
   }
