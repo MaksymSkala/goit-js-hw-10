@@ -15,9 +15,12 @@
     <p class="loader">Loading data, please wait...</p>
     <p class="error">Oops! Something went wrong! Try reloading the page!</p>
     </div>
-    <div class="cat-info">
-      <div class="cat-info-img"></div>
-      <div class="cat-info-text"></div>
+    <div class="cat-info-text">
+      <div class="text-container">
+        <h2>${cat.breeds[0].name}</h2>
+        <p>${cat.breeds[0].description}</p>
+        <p>Temperament: ${cat.breeds[0].temperament}</p>
+      </div>
     </div>
     <span class="loader"></span>
     
