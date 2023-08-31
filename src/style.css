@@ -40,3 +40,18 @@
       max-width: 100%;
       height: auto;
   }
+
+  .cat-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Стилі для зображення кота */
+  .cat-image {
+    max-width: 50%; /* Зображення займе половину екрана */
+    height: auto;
+  }
