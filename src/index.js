@@ -47,4 +47,9 @@ breedSelect.addEventListener("change", () => {
   displayCatInfo(selectedBreedId);
 });
 
+// Отримати посилання на елемент .error
+const error = document.querySelector(".error");
+
+// Приховати елемент .error при завантаженні сторінки
+error.style.display = "none";
 populateBreedSelect();
