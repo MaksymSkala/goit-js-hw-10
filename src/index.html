@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homework 10</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="index.js" type="module"></script>
-</head>
-<body>
-  <div class="container">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 10</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
     <select class="breed-select"></select>
-    <div class="cat-info">
-      <div class="cat-info-img">
-        <img id="cat-image" src="cat-api.js" alt="Cat Image">
-      </div>
-      <div class="cat-info-text" id="cat-description"></div>
+    <p class="loader">Loading data, please wait...</p>
+    <p class="error">Oops! Something went wrong! Try reloading the page!</p>
     </div>
-  </div>
-  <span class="loader"></span>
-</body>
+    <div class="cat-info">
+      <div class="cat-info-img"></div>
+      <div class="cat-info-text"></div>
+    </div>
+    <span class="loader"></span>
+    
+  </body>
 </html>
