@@ -38,23 +38,43 @@
   }
   
   .container {
-    
+    display: flex;
+    height: 100vh;
   }
   
   /* Ліва половина контейнера */
   .cat-info {
+    flex: 1;
     display: flex;
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
   }
   
   /* Зображення кота */
-  .cat-info-img .img {
-    max-width: 400px;
-    max-height: 300px;
-
+  .cat-info-img img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
   }
   
   /* Права половина контейнера */
   .cat-info-text {
-    display: block;
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Опис і темперамент відображаються в колонку */
+    justify-content: space-between; /* Розмістити текст між верхом і низом */
+    align-items: flex-start; /* Вирівняти текст зверху */
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    max-width: 400px; /* Максимальна ширина тексту */
+  }
+  
+  /* Темперамент */
+  .cat-info-text p:last-child {
+    margin-bottom: 0;
   }
