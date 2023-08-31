@@ -43,7 +43,7 @@
   
   .cat-info {
     display: flex;
-    align-items: flex-start; /* Вирівнювання вгору */
+    align-items: center; /* Центрування по вертикалі */
     flex: 1; /* Займе залишок доступного простору в контейнері */
     padding: 20px;
   }
@@ -63,4 +63,7 @@
   .cat-info-text {
     flex: 1; /* Займе половину доступного простору */
     padding-left: 20px; /* Відступ зліва між зображенням та текстом */
+    display: flex;
+    flex-direction: column; /* Опис від верху до низу */
+    justify-content: flex-start; /* Вирівнювання тексту вгору */
   }
