@@ -38,15 +38,14 @@
   }
   
   .container {
-    display: flex;
-    height: 100vh; /* Висота 100% видимої частини екрану */
+    
   }
   
   /* Ліва половина контейнера */
   .cat-info {
     flex: 1; /* Займає половину ширини */
     display: flex;
-    flex-direction: column;
+    
     justify-content: center;
     align-items: center;
   }
