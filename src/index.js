@@ -38,7 +38,7 @@ async function displayCatInfo(breedId) {
     catImage.style.objectFit = "cover";
     catImage.style.maxWidth = "100%";
     catImage.style.marginRight = "20px";
-  }
+  
 
   } catch (err) {
     console.error("Error fetching cat information:", err);
