@@ -25,14 +25,19 @@ async function populateBreedSelect() {
 async function displayCatInfo(breedId) {
   try {
     const cat = await fetchCatByBreed(breedId);
-    catInfo.innerHTML = `
-      <img src="${cat.url}" alt="${cat.breeds[0].name}" width="500px" height="500px" />
-      <div class="cat-text">
-        <h2>${cat.breeds[0].name}</h2>
-        <p>${cat.breeds[0].description}</p>
-        <p>Temperament: ${cat.breeds[0].temperament}</p>
-      </div>
-    `;
+    
+    if (cat && cat.url) {
+      catInfo.innerHTML = `
+        <img src="${cat.url}" alt="${cat.breeds[0].name}" width="500px" height="500px" />
+        <div class="cat-text">
+          <h2>${cat.breeds[0].name}</h2>
+          <p>${cat.breeds[0].description}</p>
+          <p>Temperament: ${cat.breeds[0].temperament}</p>
+        </div>
+      `;
+    } else {
+      error.textContent = "Oops! Cat information not found.";
+    }
     
   } catch (err) {
     console.error("Error fetching cat information:", err);
