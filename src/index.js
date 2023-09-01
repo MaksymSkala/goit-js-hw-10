@@ -55,5 +55,4 @@ breedSelect.addEventListener("change", () => {
   displayCatInfo(selectedBreedId);
 });
 
-error.style.display = "none";
 populateBreedSelect();
