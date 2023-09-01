@@ -39,7 +39,7 @@ async function displayCatInfo(breedId) {
     error.style.display = "none";
   } catch (err) {
     console.error("Error fetching cat information:", err);
-    // Зробити повідомлення про помилку видимим
+    
     error.style.display = "block";
     error.textContent = "Oops! Something went wrong while fetching cat information.";
   } finally {
