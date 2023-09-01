@@ -35,12 +35,12 @@ async function displayCatInfo(breedId) {
           <p>Temperament: ${cat.breeds[0].temperament}</p>
         </div>
       `;
-    } else {
-      error.textContent = "Oops! Cat information not found.";
-    }
-    
+    // Приховати повідомлення про помилку, якщо воно вже видиме
+    error.style.display = "none";
   } catch (err) {
     console.error("Error fetching cat information:", err);
+    // Зробити повідомлення про помилку видимим
+    error.style.display = "block";
     error.textContent = "Oops! Something went wrong while fetching cat information.";
   } finally {
     loader.style.display = "none";
