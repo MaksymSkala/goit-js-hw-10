@@ -1,9 +1,7 @@
 .loader {
   position: relative;
   width: 100px;
-  height: 100px;
-  display: grid;
-  place-items: center;
+  height: 100px;  
 }
 
 .loader:before , .loader:after{
@@ -23,33 +21,30 @@
   100% { transform: rotate(360deg)}
 }
   
-  .container {
-    margin-bottom: 20px;
-  }    
-  
-  .cat-info {
-    display: flex;    
-    
-  }
-  
-  .cat-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    padding: 10px;
-  }
+.container {
+  margin-bottom: 20px;
+}    
 
-  .cat-text h2 {
-    font-size: 24px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
-  
-  .cat-text p {
-    font-size: 16px;
-    margin: 0;
-    margin-bottom: 10px;
-  }
+.cat-info {
+  display: flex;
+}
 
-  
+.cat-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+.cat-text h2 {
+  font-size: 24px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.cat-text p {
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+}  
