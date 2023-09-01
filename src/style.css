@@ -2,6 +2,8 @@
   position: relative;
   width: 100px;
   height: 100px;
+  display: grid;
+  place-items: center;
 }
 
 .loader:before , .loader:after{
